@@ -1,0 +1,13 @@
+.addItem {
+    padding: 5%;
+    background: #f3f4f6;
+    grid-area: main;
+    overflow-y: auto;
+}
+
+.addItem_heading1 {
+    font-weight: 700;
+    padding-bottom: 30px;
+    font-size: 32px;
+    color: #39447a;
+}
