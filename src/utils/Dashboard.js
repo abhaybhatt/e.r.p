@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import Navbar from '../components/navbar/Navbar';
 import Sidebar from '../components/sidebar/Sidebar';
 import isLoggedIn from './isLoggedIn';
-const Dashboard = ({ children }) => {
+const Dashboard = ({ children, type }) => {
     const [sidebar, setSidebar] = useState(false);
 
     const openSidebar = () => {
@@ -14,13 +14,13 @@ const Dashboard = ({ children }) => {
         setSidebar(false);
     }
     const navigate = useNavigate();
-    useEffect(() => {
-        if (!isLoggedIn()) {
-            navigate("/login");
-        }
-    }, [])
+    // useEffect(() => {
+    //     if (!isLoggedIn()) {
+    //         navigate("/login");
+    //     }
+    // }, [])
     return (
-        <div className="container">
+        <div className={type === 2 ? "container" : "container"}>
             <Navbar sidebar={sidebar} openSidebar={openSidebar} />
             {children}
             <Sidebar sidebar={sidebar} closeSidebar={closeSidebar} />

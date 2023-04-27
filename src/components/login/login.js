@@ -29,6 +29,7 @@ export const Login = () => {
     };
 
     const onLogin = async (email, password) => {
+        navigate("/");
         await axios.post(`${backebdEndpoint}/user/login`, {
             email: email,
             password: password

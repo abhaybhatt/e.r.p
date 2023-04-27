@@ -1,4 +1,5 @@
 import "./Sidebar.css";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 const Sidebar = ({ sidebar, closeSidebar }) => {
@@ -20,17 +21,21 @@ const Sidebar = ({ sidebar, closeSidebar }) => {
       <div className="sidebar__menu">
         <div className="sidebar__link active_menu_link">
           <i className="fa fa-home"></i>
-          <a href="#">Dashboard</a>
+          <Link to="/">Dashboard</Link>
         </div>
         <h2>Services</h2>
         <div className="sidebar__link">
           <i className="fa fa-user-secret" aria-hidden="true"></i>
-          <a href="/add-item">Add Item</a>
+          <Link to="/table">View Inventory</Link>
         </div>
         <div className="sidebar__link">
-          <i className="fa fa-building-o"></i>
-          <a href="#">Update Item</a>
+          <i className="fa fa-user-secret" aria-hidden="true"></i>
+          <Link to="/add-item">Add Inventory</Link>
         </div>
+        {/* <div className="sidebar__link">
+          <i className="fa fa-building-o"></i>
+          <a href="#">Update Inventory</a>
+        </div> */}
         {/* <div className="sidebar__link">
           <i className="fa fa-wrench"></i>
           <a href="#">Employee Management</a>

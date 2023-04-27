@@ -11,3 +11,16 @@
     font-size: 32px;
     color: #39447a;
 }
+
+.addButtonContainer {
+    text-align: center;
+}
+
+.addButton {
+    backGround-color: rgb(55, 183, 222);
+    color: white;
+}
+
+.addButton:hover {
+    color: white !important;
+}
